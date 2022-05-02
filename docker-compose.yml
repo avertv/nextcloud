@@ -46,7 +46,7 @@ services:
       - ./db-data:/var/lib/postgresql/data
       - /etc/localtime:/etc/localtime:ro
     environment:
-      - POSTGRES_PASSWORD=230769@Saw#
+      - POSTGRES_PASSWORD=CHANGEME
     restart: unless-stopped
   
   app:
@@ -66,9 +66,9 @@ services:
       - ./app/themes:/var/www/html/themes
       - /etc/localtime:/etc/localtime:ro
     environment:
-      - VIRTUAL_HOST=nextiptv.tk
-      - LETSENCRYPT_HOST=nextiptv.tk
-      - LETSENCRYPT_EMAIL=2028426@gmail.com
+      - VIRTUAL_HOST=example.com
+      - LETSENCRYPT_HOST=example.com
+      - LETSENCRYPT_EMAIL=example@gmail.com
     restart: unless-stopped  
   onlyoffice:
     container_name: onlyoffice-documentserver
